@@ -1,0 +1,500 @@
+23/02/16 08:56:14 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/6576d9206b381cf86adf20c0252480dc/m1.jar
+23/02/16 08:56:14 INFO mapreduce.ExportJobBase: Beginning export of m1
+23/02/16 08:56:16 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 08:56:17 INFO input.FileInputFormat: Total input paths to process : 1
+23/02/16 08:56:17 INFO input.FileInputFormat: Total input paths to process : 1
+23/02/16 08:56:17 INFO mapred.JobClient: Running job: job_202302160647_0011
+23/02/16 08:56:18 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 08:56:28 INFO mapred.JobClient: Task Id : attempt_202302160647_0011_m_000000_0, Status : FAILED
+java.lang.NumberFormatException: For input string: " 11000000"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:449)
+	at java.lang.Integer.valueOf(Integer.java:554)
+	at m1.__loadFromFields(m1.java:228)
+	at m1.parse(m1.java:170)
+	at org.apache.sqoop.mapreduce.TextExportMapper.map(TextExportMapper.java:77)
+	at org.apache.sqoop.mapreduce.TextExportMapper.map(TextExportMapper.java:36)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:140)
+	at org.apache.sqoop.mapreduce.AutoProgressMapper.run(AutoProgressMapper.java:182)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:645)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:325)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:268)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1332)
+	at org.apache.hadoop.mapred.
+ha23/02/16 08:56:34 INFO mapred.JobClient: Task Id : attempt_202302160647_0011_m_000000_1, Status : FAILED
+java.lang.NumberFormatException: For input string: " 11000000"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:449)
+	at java.lang.Integer.valueOf(Integer.java:554)
+	at m1.__loadFromFields(m1.java:228)
+	at m1.parse(m1.java:170)
+	at org.apache.sqoop.mapreduce.TextExportMapper.map(TextExportMapper.java:77)
+	at org.apache.sqoop.mapreduce.TextExportMapper.map(TextExportMapper.java:36)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:140)
+	at org.apache.sqoop.mapreduce.AutoProgressMapper.run(AutoProgressMapper.java:182)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:645)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:325)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:268)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1332)
+	at org.apache.hadoop.mapred.
+23/02/16 08:56:40 INFO mapred.JobClient: Task Id : attempt_202302160647_0011_m_000000_2, Status : FAILED
+java.lang.NumberFormatException: For input string: " 11000000"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:449)
+	at java.lang.Integer.valueOf(Integer.java:554)
+	at m1.__loadFromFields(m1.java:228)
+	at m1.parse(m1.java:170)
+	at org.apache.sqoop.mapreduce.TextExportMapper.map(TextExportMapper.java:77)
+	at org.apache.sqoop.mapreduce.TextExportMapper.map(TextExportMapper.java:36)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:140)
+	at org.apache.sqoop.mapreduce.AutoProgressMapper.run(AutoProgressMapper.java:182)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:645)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:325)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:268)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1332)
+	at org.apache.hadoop.mapred.
+23/02/16 08:56:50 INFO mapred.JobClient: Job complete: job_202302160647_0011
+^C23/02/16 08:56:50 INFO mapred.JobClient: Counters: 7
+[training@localhost ~]$ hadoop fs -ls HiveWork1
+Found 2 items
+-rw-r--r--   1 training supergroup         80 2023-02-16 08:46 HiveWork1/Sample_m1
+-rw-r--r--   1 training supergroup        202 2023-02-14 08:34 HiveWork1/u.genre
+[training@localhost ~]$ cd HiveWork1
+bash: cd: HiveWork1: No such file or directory
+[training@localhost ~]$ hadoop fs -rm -r HiveWork1/Sample_m1
+Deleted HiveWork1/Sample_m1
+[training@localhost ~]$ hadoop fs -ls HiveWork1
+Found 1 items
+-rw-r--r--   1 training supergroup        202 2023-02-14 08:34 HiveWork1/u.genre
+[training@localhost ~]$ cd HiveWorkSpace
+[training@localhost HiveWorkSpace]$ hadoop fs -put Sample_m1 HiveWork1
+[training@localhost HiveWorkSpace]$ hadoop fs -ls HiveWork1
+Found 2 items
+-rw-r--r--   1 training supergroup         65 2023-02-16 08:59 HiveWork1/Sample_m1
+-rw-r--r--   1 training supergroup        202 2023-02-14 08:34 HiveWork1/u.genre
+[training@localhost HiveWorkSpace]$ cd ..
+[training@localhost ~]$ sqoop export --connect jdbc:mysql://localhost/movielens --username training --password training -export-dir HiveWork1/Sample_m1 --table m1
+23/02/16 09:00:00 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/02/16 09:00:00 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+23/02/16 09:00:00 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 09:00:00 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `m1` AS t LIMIT 1
+23/02/16 09:00:00 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `m1` AS t LIMIT 1
+23/02/16 09:00:00 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/717712b434bd765ec1f08ab4dd035f22/m1.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 09:00:02 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/717712b434bd765ec1f08ab4dd035f22/m1.jar
+23/02/16 09:00:02 INFO mapreduce.ExportJobBase: Beginning export of m1
+23/02/16 09:00:04 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 09:00:04 INFO input.FileInputFormat: Total input paths to process : 1
+23/02/16 09:00:04 INFO input.FileInputFormat: Total input paths to process : 1
+23/02/16 09:00:05 INFO mapred.JobClient: Running job: job_202302160647_0012
+23/02/16 09:00:06 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 09:00:14 INFO mapred.JobClient:  map 100% reduce 0%
+23/02/16 09:00:16 INFO mapred.JobClient: Job complete: job_202302160647_0012
+23/02/16 09:00:16 INFO mapred.JobClient: Counters: 24
+23/02/16 09:00:16 INFO mapred.JobClient:   File System Counters
+23/02/16 09:00:16 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/02/16 09:00:16 INFO mapred.JobClient:     FILE: Number of bytes written=197554
+23/02/16 09:00:16 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/02/16 09:00:16 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/02/16 09:00:16 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/02/16 09:00:16 INFO mapred.JobClient:     HDFS: Number of bytes read=186
+23/02/16 09:00:16 INFO mapred.JobClient:     HDFS: Number of bytes written=0
+23/02/16 09:00:16 INFO mapred.JobClient:     HDFS: Number of read operations=6
+23/02/16 09:00:16 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/02/16 09:00:16 INFO mapred.JobClient:     HDFS: Number of write operations=0
+23/02/16 09:00:16 INFO mapred.JobClient:   Job Counters 
+23/02/16 09:00:16 INFO mapred.JobClient:     Launched map tasks=1
+23/02/16 09:00:16 INFO mapred.JobClient:     Data-local map tasks=1
+23/02/16 09:00:16 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=9102
+23/02/16 09:00:16 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/02/16 09:00:16 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/02/16 09:00:16 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/02/16 09:00:16 INFO mapred.JobClient:   Map-Reduce Framework
+23/02/16 09:00:16 INFO mapred.JobClient:     Map input records=3
+23/02/16 09:00:16 INFO mapred.JobClient:     Map output records=3
+23/02/16 09:00:16 INFO mapred.JobClient:     Input split bytes=115
+23/02/16 09:00:16 INFO mapred.JobClient:     Spilled Records=0
+23/02/16 09:00:16 INFO mapred.JobClient:     CPU time spent (ms)=760
+23/02/16 09:00:16 INFO mapred.JobClient:     Physical memory (bytes) snapshot=86454272
+23/02/16 09:00:16 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=401629184
+23/02/16 09:00:16 INFO mapred.JobClient:     Total committed heap usage (bytes)=81199104
+23/02/16 09:00:16 INFO mapreduce.ExportJobBase: Transferred 0 bytes in 12.3702 seconds (0 bytes/sec)
+23/02/16 09:00:16 INFO mapreduce.ExportJobBase: Exported 3 records.
+[training@localhost ~]$ hadoop fs -ls user/hive/warehouse
+ls: `user/hive/warehouse': No such file or directory
+[training@localhost ~]$ cd HiveWorkSpace
+[training@localhost HiveWorkSpace]$ cd ml-data
+[training@localhost ml-data]$ hadoop fs -ls user/hive/warehouse
+ls: `user/hive/warehouse': No such file or directory
+[training@localhost ml-data]$ hadoop fs -ls /user/hive/warehouse
+Found 5 items
+drwxr-xr-x   - training supergroup          0 2023-02-15 06:43 /user/hive/warehouse/movie_userid.db
+drwxr-xr-x   - training supergroup          0 2023-02-15 06:19 /user/hive/warehouse/movies_part
+drwxr-xr-x   - training supergroup          0 2023-02-15 07:58 /user/hive/warehouse/ratingbucket
+drwxr-xr-x   - training supergroup          0 2023-02-14 08:03 /user/hive/warehouse/userdemo
+drwxr-xr-x   - training supergroup          0 2023-02-14 07:24 /user/hive/warehouse/userrating
+[training@localhost ml-data]$ sqoop create-hive-table --conect jdbc:mysql://localhost/movielens --username training --password training --table genre
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Error parsing arguments for create-hive-table:
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: --conect
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: jdbc:mysql://localhost/movielens
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: --username
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: --password
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: --table
+23/02/16 09:09:50 ERROR tool.BaseSqoopTool: Unrecognized argument: genre
+
+Try --help for usage instructions.
+usage: sqoop create-hive-table [GENERIC-ARGS] [TOOL-ARGS]
+
+Common arguments:
+   --connect <jdbc-uri>                         Specify JDBC connect
+                                                string
+   --connection-manager <class-name>            Specify connection manager
+                                                class name
+   --connection-param-file <properties-file>    Specify connection
+                                                parameters file
+   --driver <class-name>                        Manually specify JDBC
+                                                driver class to use
+   --hadoop-home <dir>                          Override $HADOOP_HOME
+   --help                                       Print usage instructions
+-P                                              Read password from console
+   --password <password>                        Set authentication
+                                                password
+   --username <username>                        Set authentication
+                                                username
+   --verbose                                    Print more information
+                                                while working
+
+Hive arguments:
+   --create-hive-table                         Fail if the target hive
+                                               table exists
+   --hive-delims-replacement <arg>             Replace Hive record \0x01
+                                               and row delimiters (\n\r)
+                                               from imported string fields
+                                               with user-defined string
+   --hive-drop-import-delims                   Drop Hive record \0x01 and
+                                               row delimiters (\n\r) from
+                                               imported string fields
+   --hive-home <dir>                           Override $HIVE_HOME
+   --hive-overwrite                            Overwrite existing data in
+                                               the Hive table
+   --hive-partition-key <partition-key>        Sets the partition key to
+                                               use when importing to hive
+   --hive-partition-value <partition-value>    Sets the partition value to
+                                               use when importing to hive
+   --hive-table <table-name>                   Sets the table name to use
+                                               when importing to hive
+   --map-column-hive <arg>                     Override mapping for
+                                               specific column to hive
+                                               types.
+   --table <table-name>                        The db table to read the
+                                               definition from
+
+Output line formatting arguments:
+   --enclosed-by <char>               Sets a required field enclosing
+                                      character
+   --escaped-by <char>                Sets the escape character
+   --fields-terminated-by <char>      Sets the field separator character
+   --lines-terminated-by <char>       Sets the end-of-line character
+   --mysql-delimiters                 Uses MySQL's default delimiter set:
+                                      fields: ,  lines: \n  escaped-by: \
+                                      optionally-enclosed-by: '
+   --optionally-enclosed-by <char>    Sets a field enclosing character
+
+Generic Hadoop command-line arguments:
+(must preceed any tool-specific arguments)
+Generic options supported are
+-conf <configuration file>     specify an application configuration file
+-D <property=value>            use value for given property
+-fs <local|namenode:port>      specify a namenode
+-jt <local|jobtracker:port>    specify a job tracker
+-files <comma separated list of files>    specify comma separated files to be copied to the map reduce cluster
+-libjars <comma separated list of jars>    specify comma separated jar files to include in the classpath.
+-archives <comma separated list of archives>    specify comma separated archives to be unarchived on the compute machines.
+
+The general command line syntax is
+bin/hadoop command [genericOptions] [commandOptions]
+
+
+At minimum, you must specify --connect and --table
+[training@localhost ml-data]$ sqoop create-hive-table --conect jdbc:mysql://localhost/movielens --username training --password training --table genre
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Error parsing arguments for create-hive-table:
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: --conect
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: jdbc:mysql://localhost/movielens
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: --username
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: --password
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: --table
+23/02/16 09:11:20 ERROR tool.BaseSqoopTool: Unrecognized argument: genre
+
+Try --help for usage instructions.
+usage: sqoop create-hive-table [GENERIC-ARGS] [TOOL-ARGS]
+
+Common arguments:
+   --connect <jdbc-uri>                         Specify JDBC connect
+                                                string
+   --connection-manager <class-name>            Specify connection manager
+                                                class name
+   --connection-param-file <properties-file>    Specify connection
+                                                parameters file
+   --driver <class-name>                        Manually specify JDBC
+                                                driver class to use
+   --hadoop-home <dir>                          Override $HADOOP_HOME
+   --help                                       Print usage instructions
+-P                                              Read password from console
+   --password <password>                        Set authentication
+                                                password
+   --username <username>                        Set authentication
+                                                username
+   --verbose                                    Print more information
+                                                while working
+
+Hive arguments:
+   --create-hive-table                         Fail if the target hive
+                                               table exists
+   --hive-delims-replacement <arg>             Replace Hive record \0x01
+                                               and row delimiters (\n\r)
+                                               from imported string fields
+                                               with user-defined string
+   --hive-drop-import-delims                   Drop Hive record \0x01 and
+                                               row delimiters (\n\r) from
+                                               imported string fields
+   --hive-home <dir>                           Override $HIVE_HOME
+   --hive-overwrite                            Overwrite existing data in
+                                               the Hive table
+   --hive-partition-key <partition-key>        Sets the partition key to
+                                               use when importing to hive
+   --hive-partition-value <partition-value>    Sets the partition value to
+                                               use when importing to hive
+   --hive-table <table-name>                   Sets the table name to use
+                                               when importing to hive
+   --map-column-hive <arg>                     Override mapping for
+                                               specific column to hive
+                                               types.
+   --table <table-name>                        The db table to read the
+                                               definition from
+
+Output line formatting arguments:
+   --enclosed-by <char>               Sets a required field enclosing
+                                      character
+   --escaped-by <char>                Sets the escape character
+   --fields-terminated-by <char>      Sets the field separator character
+   --lines-terminated-by <char>       Sets the end-of-line character
+   --mysql-delimiters                 Uses MySQL's default delimiter set:
+                                      fields: ,  lines: \n  escaped-by: \
+                                      optionally-enclosed-by: '
+   --optionally-enclosed-by <char>    Sets a field enclosing character
+
+Generic Hadoop command-line arguments:
+(must preceed any tool-specific arguments)
+Generic options supported are
+-conf <configuration file>     specify an application configuration file
+-D <property=value>            use value for given property
+-fs <local|namenode:port>      specify a namenode
+-jt <local|jobtracker:port>    specify a job tracker
+-files <comma separated list of files>    specify comma separated files to be copied to the map reduce cluster
+-libjars <comma separated list of jars>    specify comma separated jar files to include in the classpath.
+-archives <comma separated list of archives>    specify comma separated archives to be unarchived on the compute machines.
+
+The general command line syntax is
+bin/hadoop command [genericOptions] [commandOptions]
+
+
+At minimum, you must specify --connect and --table
+[training@localhost ml-data]$ sqoop create-hive-table --conect jdbc:mysql://localhost/movielens --username training --password training --table genre
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Error parsing arguments for create-hive-table:
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: --conect
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: jdbc:mysql://localhost/movielens
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: --username
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: --password
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: --table
+23/02/16 09:12:10 ERROR tool.BaseSqoopTool: Unrecognized argument: genre
+
+Try --help for usage instructions.
+usage: sqoop create-hive-table [GENERIC-ARGS] [TOOL-ARGS]
+
+Common arguments:
+   --connect <jdbc-uri>                         Specify JDBC connect
+                                                string
+   --connection-manager <class-name>            Specify connection manager
+                                                class name
+   --connection-param-file <properties-file>    Specify connection
+                                                parameters file
+   --driver <class-name>                        Manually specify JDBC
+                                                driver class to use
+   --hadoop-home <dir>                          Override $HADOOP_HOME
+   --help                                       Print usage instructions
+-P                                              Read password from console
+   --password <password>                        Set authentication
+                                                password
+   --username <username>                        Set authentication
+                                                username
+   --verbose                                    Print more information
+                                                while working
+
+Hive arguments:
+   --create-hive-table                         Fail if the target hive
+                                               table exists
+   --hive-delims-replacement <arg>             Replace Hive record \0x01
+                                               and row delimiters (\n\r)
+                                               from imported string fields
+                                               with user-defined string
+   --hive-drop-import-delims                   Drop Hive record \0x01 and
+                                               row delimiters (\n\r) from
+                                               imported string fields
+   --hive-home <dir>                           Override $HIVE_HOME
+   --hive-overwrite                            Overwrite existing data in
+                                               the Hive table
+   --hive-partition-key <partition-key>        Sets the partition key to
+                                               use when importing to hive
+   --hive-partition-value <partition-value>    Sets the partition value to
+                                               use when importing to hive
+   --hive-table <table-name>                   Sets the table name to use
+                                               when importing to hive
+   --map-column-hive <arg>                     Override mapping for
+                                               specific column to hive
+                                               types.
+   --table <table-name>                        The db table to read the
+                                               definition from
+
+Output line formatting arguments:
+   --enclosed-by <char>               Sets a required field enclosing
+                                      character
+   --escaped-by <char>                Sets the escape character
+   --fields-terminated-by <char>      Sets the field separator character
+   --lines-terminated-by <char>       Sets the end-of-line character
+   --mysql-delimiters                 Uses MySQL's default delimiter set:
+                                      fields: ,  lines: \n  escaped-by: \
+                                      optionally-enclosed-by: '
+   --optionally-enclosed-by <char>    Sets a field enclosing character
+
+Generic Hadoop command-line arguments:
+(must preceed any tool-specific arguments)
+Generic options supported are
+-conf <configuration file>     specify an application configuration file
+-D <property=value>            use value for given property
+-fs <local|namenode:port>      specify a namenode
+-jt <local|jobtracker:port>    specify a job tracker
+-files <comma separated list of files>    specify comma separated files to be copied to the map reduce cluster
+-libjars <comma separated list of jars>    specify comma separated jar files to include in the classpath.
+-archives <comma separated list of archives>    specify comma separated archives to be unarchived on the compute machines.
+
+The general command line syntax is
+bin/hadoop command [genericOptions] [commandOptions]
+
+
+At minimum, you must specify --connect and --table
+[training@localhost ml-data]$ cd ..
+[training@localhost HiveWorkSpace]$ cd ..
+[training@localhost ~]$ sqoop create-hive-table --conect jdbc:mysql://localhost/movielens --username training --password training --table genre
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Error parsing arguments for create-hive-table:
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: --conect
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: jdbc:mysql://localhost/movielens
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: --username
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: --password
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: training
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: --table
+23/02/16 09:12:28 ERROR tool.BaseSqoopTool: Unrecognized argument: genre
+
+Try --help for usage instructions.
+usage: sqoop create-hive-table [GENERIC-ARGS] [TOOL-ARGS]
+
+Common arguments:
+   --connect <jdbc-uri>                         Specify JDBC connect
+                                                string
+   --connection-manager <class-name>            Specify connection manager
+                                                class name
+   --connection-param-file <properties-file>    Specify connection
+                                                parameters file
+   --driver <class-name>                        Manually specify JDBC
+                                                driver class to use
+   --hadoop-home <dir>                          Override $HADOOP_HOME
+   --help                                       Print usage instructions
+-P                                              Read password from console
+   --password <password>                        Set authentication
+                                                password
+   --username <username>                        Set authentication
+                                                username
+   --verbose                                    Print more information
+                                                while working
+
+Hive arguments:
+   --create-hive-table                         Fail if the target hive
+                                               table exists
+   --hive-delims-replacement <arg>             Replace Hive record \0x01
+                                               and row delimiters (\n\r)
+                                               from imported string fields
+                                               with user-defined string
+   --hive-drop-import-delims                   Drop Hive record \0x01 and
+                                               row delimiters (\n\r) from
+                                               imported string fields
+   --hive-home <dir>                           Override $HIVE_HOME
+   --hive-overwrite                            Overwrite existing data in
+                                               the Hive table
+   --hive-partition-key <partition-key>        Sets the partition key to
+                                               use when importing to hive
+   --hive-partition-value <partition-value>    Sets the partition value to
+                                               use when importing to hive
+   --hive-table <table-name>                   Sets the table name to use
+                                               when importing to hive
+   --map-column-hive <arg>                     Override mapping for
+                                               specific column to hive
+                                               types.
+   --table <table-name>                        The db table to read the
+                                               definition from
+
+Output line formatting arguments:
+   --enclosed-by <char>               Sets a required field enclosing
+                                      character
+   --escaped-by <char>                Sets the escape character
+   --fields-terminated-by <char>      Sets the field separator character
+   --lines-terminated-by <char>       Sets the end-of-line character
+   --mysql-delimiters                 Uses MySQL's default delimiter set:
+                                      fields: ,  lines: \n  escaped-by: \
+                                      optionally-enclosed-by: '
+   --optionally-enclosed-by <char>    Sets a field enclosing character
+
+Generic Hadoop command-line arguments:
+(must preceed any tool-specific arguments)
+Generic options supported are
+-conf <configuration file>     specify an application configuration file
+-D <property=value>            use value for given property
+-fs <local|namenode:port>      specify a namenode
+-jt <local|jobtracker:port>    specify a job tracker
+-files <comma separated list of files>    specify comma separated files to be copied to the map reduce cluster
+-libjars <comma separated list of jars>    specify comma separated jar files to include in the classpath.
+-archives <comma separated list of archives>    specify comma separated archives to be unarchived on the compute machines.
+
+The general command line syntax is
+bin/hadoop command [genericOptions] [commandOptions]
+
+
+At minimum, you must specify --connect and --table
+[training@localhost ~]$ sqoop create-hive-table --connect jdbc:mysql://localhost/movielens --username training --password training --table genre
+23/02/16 09:15:11 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/02/16 09:15:11 INFO tool.BaseSqoopTool: Using Hive-specific delimiters for output. You can override
+23/02/16 09:15:11 INFO tool.BaseSqoopTool: delimiters with --fields-terminated-by, etc.
+23/02/16 09:15:11 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+23/02/16 09:15:12 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `genre` AS t LIMIT 1
+23/02/16 09:15:12 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `genre` AS t LIMIT 1
+23/02/16 09:15:13 INFO hive.HiveImport: Removing temporary files from import process: hdfs://0.0.0.0:8020/user/training/genre/_logs
+23/02/16 09:15:13 INFO hive.HiveImport: Loading uploaded data into Hive
+23/02/16 09:15:15 INFO hive.HiveImport: Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+23/02/16 09:15:16 INFO hive.HiveImport: Hive history file=/tmp/training/hive_job_log_training_202302160915_9396107.txt
+23/02/16 09:15:20 INFO hive.HiveImport: OK
+23/02/16 09:15:20 INFO hive.HiveImport: Time taken: 4.405 seconds
+23/02/16 09:15:20 INFO hive.HiveImport: Hive import complete.
+23/02/16 09:15:20 INFO hive.HiveImport: Export directory is not empty, keeping it.
+[training@localhost ~]$ 

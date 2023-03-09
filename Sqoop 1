@@ -1,0 +1,479 @@
+23/02/16 07:57:30 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 07:57:30 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `genre` AS t LIMIT 1
+23/02/16 07:57:30 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `genre` AS t LIMIT 1
+23/02/16 07:57:30 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/genre.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 07:57:32 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/genre.jar
+23/02/16 07:57:32 WARN manager.MySQLManager: It looks like you are importing from mysql.
+23/02/16 07:57:32 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+23/02/16 07:57:32 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+23/02/16 07:57:32 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+23/02/16 07:57:32 INFO mapreduce.ImportJobBase: Beginning import of genre
+23/02/16 07:57:34 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 07:57:35 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`id`), MAX(`id`) FROM `genre`
+23/02/16 07:57:35 INFO mapred.JobClient: Running job: job_202302160647_0002
+23/02/16 07:57:36 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 07:57:47 INFO mapred.JobClient:  map 50% reduce 0%
+23/02/16 07:57:54 INFO mapred.JobClient:  map 100% reduce 0%
+23/02/16 07:57:56 INFO mapred.JobClient: Job complete: job_202302160647_0002
+23/02/16 07:57:56 INFO mapred.JobClient: Counters: 23
+23/02/16 07:57:56 INFO mapred.JobClient:   File System Counters
+23/02/16 07:57:56 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/02/16 07:57:56 INFO mapred.JobClient:     FILE: Number of bytes written=796616
+23/02/16 07:57:56 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/02/16 07:57:56 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/02/16 07:57:56 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/02/16 07:57:56 INFO mapred.JobClient:     HDFS: Number of bytes read=398
+23/02/16 07:57:56 INFO mapred.JobClient:     HDFS: Number of bytes written=191
+23/02/16 07:57:56 INFO mapred.JobClient:     HDFS: Number of read operations=4
+23/02/16 07:57:56 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/02/16 07:57:56 INFO mapred.JobClient:     HDFS: Number of write operations=4
+23/02/16 07:57:56 INFO mapred.JobClient:   Job Counters 
+23/02/16 07:57:56 INFO mapred.JobClient:     Launched map tasks=4
+23/02/16 07:57:56 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=32206
+23/02/16 07:57:56 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/02/16 07:57:56 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/02/16 07:57:56 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/02/16 07:57:56 INFO mapred.JobClient:   Map-Reduce Framework
+23/02/16 07:57:56 INFO mapred.JobClient:     Map input records=18
+23/02/16 07:57:56 INFO mapred.JobClient:     Map output records=18
+23/02/16 07:57:56 INFO mapred.JobClient:     Input split bytes=398
+23/02/16 07:57:56 INFO mapred.JobClient:     Spilled Records=0
+23/02/16 07:57:56 INFO mapred.JobClient:     CPU time spent (ms)=3770
+23/02/16 07:57:56 INFO mapred.JobClient:     Physical memory (bytes) snapshot=348749824
+23/02/16 07:57:56 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1608511488
+23/02/16 07:57:56 INFO mapred.JobClient:     Total committed heap usage (bytes)=291110912
+23/02/16 07:57:56 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 23.3949 seconds (0 bytes/sec)
+23/02/16 07:57:56 INFO mapreduce.ImportJobBase: Retrieved 18 records.
+23/02/16 07:57:56 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 07:57:56 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `movie` AS t LIMIT 1
+23/02/16 07:57:56 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/movie.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 07:57:57 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/movie.jar
+23/02/16 07:57:57 INFO mapreduce.ImportJobBase: Beginning import of movie
+23/02/16 07:57:57 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 07:57:58 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`id`), MAX(`id`) FROM `movie`
+23/02/16 07:57:58 INFO mapred.JobClient: Running job: job_202302160647_0003
+23/02/16 07:57:59 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 07:58:10 INFO mapred.JobClient:  map 50% reduce 0%
+23/02/16 07:58:17 INFO mapred.JobClient:  map 100% reduce 0%
+23/02/16 07:58:19 INFO mapred.JobClient: Job complete: job_202302160647_0003
+23/02/16 07:58:19 INFO mapred.JobClient: Counters: 23
+23/02/16 07:58:19 INFO mapred.JobClient:   File System Counters
+23/02/16 07:58:19 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/02/16 07:58:19 INFO mapred.JobClient:     FILE: Number of bytes written=794300
+23/02/16 07:58:19 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/02/16 07:58:19 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/02/16 07:58:19 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/02/16 07:58:19 INFO mapred.JobClient:     HDFS: Number of bytes read=412
+23/02/16 07:58:19 INFO mapred.JobClient:     HDFS: Number of bytes written=102052
+23/02/16 07:58:19 INFO mapred.JobClient:     HDFS: Number of read operations=4
+23/02/16 07:58:19 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/02/16 07:58:19 INFO mapred.JobClient:     HDFS: Number of write operations=4
+23/02/16 07:58:19 INFO mapred.JobClient:   Job Counters 
+23/02/16 07:58:19 INFO mapred.JobClient:     Launched map tasks=4
+23/02/16 07:58:19 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=32377
+23/02/16 07:58:19 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/02/16 07:58:19 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/02/16 07:58:19 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/02/16 07:58:19 INFO mapred.JobClient:   Map-Reduce Framework
+23/02/16 07:58:19 INFO mapred.JobClient:     Map input records=3881
+23/02/16 07:58:19 INFO mapred.JobClient:     Map output records=3881
+23/02/16 07:58:19 INFO mapred.JobClient:     Input split bytes=412
+23/02/16 07:58:19 INFO mapred.JobClient:     Spilled Records=0
+23/02/16 07:58:19 INFO mapred.JobClient:     CPU time spent (ms)=4160
+23/02/16 07:58:19 INFO mapred.JobClient:     Physical memory (bytes) snapshot=348934144
+23/02/16 07:58:19 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1610424320
+23/02/16 07:58:19 INFO mapred.JobClient:     Total committed heap usage (bytes)=257425408
+23/02/16 07:58:19 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 22.4662 seconds (0 bytes/sec)
+23/02/16 07:58:19 INFO mapreduce.ImportJobBase: Retrieved 3881 records.
+23/02/16 07:58:19 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 07:58:19 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `moviegenre` AS t LIMIT 1
+23/02/16 07:58:19 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/moviegenre.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 07:58:20 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/moviegenre.jar
+23/02/16 07:58:20 WARN manager.CatalogQueryManager: The table moviegenre contains a multi-column primary key. Sqoop will default to the column movieid only for this job.
+23/02/16 07:58:20 WARN manager.CatalogQueryManager: The table moviegenre contains a multi-column primary key. Sqoop will default to the column movieid only for this job.
+23/02/16 07:58:20 INFO mapreduce.ImportJobBase: Beginning import of moviegenre
+23/02/16 07:58:20 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 07:58:21 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`movieid`), MAX(`movieid`) FROM `moviegenre`
+23/02/16 07:58:21 INFO mapred.JobClient: Running job: job_202302160647_0004
+23/02/16 07:58:22 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 07:58:33 INFO mapred.JobClient:  map 25% reduce 0%
+23/02/16 07:58:38 INFO mapred.JobClient:  map 75% reduce 0%
+23/02/16 07:58:43 INFO mapred.JobClient:  map 100% reduce 0%
+23/02/16 07:58:46 INFO mapred.JobClient: Job complete: job_202302160647_0004
+23/02/16 07:58:46 INFO mapred.JobClient: Counters: 23
+23/02/16 07:58:46 INFO mapred.JobClient:   File System Counters
+23/02/16 07:58:46 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/02/16 07:58:46 INFO mapred.JobClient:     FILE: Number of bytes written=794376
+23/02/16 07:58:46 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/02/16 07:58:46 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/02/16 07:58:46 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/02/16 07:58:46 INFO mapred.JobClient:     HDFS: Number of bytes read=452
+23/02/16 07:58:46 INFO mapred.JobClient:     HDFS: Number of bytes written=45082
+23/02/16 07:58:46 INFO mapred.JobClient:     HDFS: Number of read operations=4
+23/02/16 07:58:46 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/02/16 07:58:46 INFO mapred.JobClient:     HDFS: Number of write operations=4
+23/02/16 07:58:46 INFO mapred.JobClient:   Job Counters 
+23/02/16 07:58:46 INFO mapred.JobClient:     Launched map tasks=4
+23/02/16 07:58:46 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=33346
+23/02/16 07:58:46 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/02/16 07:58:46 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/02/16 07:58:46 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/02/16 07:58:46 INFO mapred.JobClient:   Map-Reduce Framework
+23/02/16 07:58:46 INFO mapred.JobClient:     Map input records=6408
+23/02/16 07:58:46 INFO mapred.JobClient:     Map output records=6408
+23/02/16 07:58:46 INFO mapred.JobClient:     Input split bytes=452
+23/02/16 07:58:46 INFO mapred.JobClient:     Spilled Records=0
+23/02/16 07:58:46 INFO mapred.JobClient:     CPU time spent (ms)=4150
+23/02/16 07:58:46 INFO mapred.JobClient:     Physical memory (bytes) snapshot=345182208
+23/02/16 07:58:46 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1604833280
+23/02/16 07:58:46 INFO mapred.JobClient:     Total committed heap usage (bytes)=274268160
+23/02/16 07:58:46 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 25.7183 seconds (0 bytes/sec)
+23/02/16 07:58:46 INFO mapreduce.ImportJobBase: Retrieved 6408 records.
+23/02/16 07:58:46 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 07:58:46 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `movierating` AS t LIMIT 1
+23/02/16 07:58:46 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/movierating.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 07:58:46 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/movierating.jar
+23/02/16 07:58:46 WARN manager.CatalogQueryManager: The table movierating contains a multi-column primary key. Sqoop will default to the column userid only for this job.
+23/02/16 07:58:46 WARN manager.CatalogQueryManager: The table movierating contains a multi-column primary key. Sqoop will default to the column userid only for this job.
+23/02/16 07:58:46 INFO mapreduce.ImportJobBase: Beginning import of movierating
+23/02/16 07:58:46 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 07:58:48 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`userid`), MAX(`userid`) FROM `movierating`
+23/02/16 07:58:48 INFO mapred.JobClient: Running job: job_202302160647_0005
+23/02/16 07:58:49 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 07:59:03 INFO mapred.JobClient:  map 50% reduce 0%
+23/02/16 07:59:13 INFO mapred.JobClient:  map 100% reduce 0%
+23/02/16 07:59:15 INFO mapred.JobClient: Job complete: job_202302160647_0005
+23/02/16 07:59:15 INFO mapred.JobClient: Counters: 23
+23/02/16 07:59:15 INFO mapred.JobClient:   File System Counters
+23/02/16 07:59:15 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/02/16 07:59:15 INFO mapred.JobClient:     FILE: Number of bytes written=794468
+23/02/16 07:59:15 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/02/16 07:59:15 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/02/16 07:59:15 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/02/16 07:59:15 INFO mapred.JobClient:     HDFS: Number of bytes read=446
+23/02/16 07:59:15 INFO mapred.JobClient:     HDFS: Number of bytes written=11553408
+23/02/16 07:59:15 INFO mapred.JobClient:     HDFS: Number of read operations=4
+23/02/16 07:59:15 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/02/16 07:59:15 INFO mapred.JobClient:     HDFS: Number of write operations=4
+23/02/16 07:59:15 INFO mapred.JobClient:   Job Counters 
+23/02/16 07:59:15 INFO mapred.JobClient:     Launched map tasks=4
+23/02/16 07:59:15 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=45188
+23/02/16 07:59:15 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/02/16 07:59:15 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/02/16 07:59:15 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/02/16 07:59:15 INFO mapred.JobClient:   Map-Reduce Framework
+23/02/16 07:59:15 INFO mapred.JobClient:     Map input records=1000205
+23/02/16 07:59:15 INFO mapred.JobClient:     Map output records=1000205
+23/02/16 07:59:15 INFO mapred.JobClient:     Input split bytes=446
+23/02/16 07:59:15 INFO mapred.JobClient:     Spilled Records=0
+23/02/16 07:59:15 INFO mapred.JobClient:     CPU time spent (ms)=14330
+23/02/16 07:59:15 INFO mapred.JobClient:     Physical memory (bytes) snapshot=494305280
+23/02/16 07:59:15 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1622282240
+23/02/16 07:59:15 INFO mapred.JobClient:     Total committed heap usage (bytes)=387907584
+23/02/16 07:59:15 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 28.949 seconds (0 bytes/sec)
+23/02/16 07:59:15 INFO mapreduce.ImportJobBase: Retrieved 1000205 records.
+23/02/16 07:59:15 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 07:59:15 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `occupation` AS t LIMIT 1
+23/02/16 07:59:15 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/occupation.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 07:59:15 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/occupation.jar
+23/02/16 07:59:15 INFO mapreduce.ImportJobBase: Beginning import of occupation
+23/02/16 07:59:15 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 07:59:16 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`id`), MAX(`id`) FROM `occupation`
+23/02/16 07:59:17 INFO mapred.JobClient: Running job: job_202302160647_0006
+23/02/16 07:59:18 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 07:59:29 INFO mapred.JobClient:  map 50% reduce 0%
+23/02/16 07:59:36 INFO mapred.JobClient:  map 100% reduce 0%
+23/02/16 07:59:38 INFO mapred.JobClient: Job complete: job_202302160647_0006
+23/02/16 07:59:38 INFO mapred.JobClient: Counters: 23
+23/02/16 07:59:38 INFO mapred.JobClient:   File System Counters
+23/02/16 07:59:38 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/02/16 07:59:38 INFO mapred.JobClient:     FILE: Number of bytes written=794352
+23/02/16 07:59:38 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/02/16 07:59:38 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/02/16 07:59:38 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/02/16 07:59:38 INFO mapred.JobClient:     HDFS: Number of bytes read=398
+23/02/16 07:59:38 INFO mapred.JobClient:     HDFS: Number of bytes written=348
+23/02/16 07:59:38 INFO mapred.JobClient:     HDFS: Number of read operations=4
+23/02/16 07:59:38 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/02/16 07:59:38 INFO mapred.JobClient:     HDFS: Number of write operations=4
+23/02/16 07:59:38 INFO mapred.JobClient:   Job Counters 
+23/02/16 07:59:38 INFO mapred.JobClient:     Launched map tasks=4
+23/02/16 07:59:38 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=32682
+23/02/16 07:59:38 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/02/16 07:59:38 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/02/16 07:59:38 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/02/16 07:59:38 INFO mapred.JobClient:   Map-Reduce Framework
+23/02/16 07:59:38 INFO mapred.JobClient:     Map input records=21
+23/02/16 07:59:38 INFO mapred.JobClient:     Map output records=21
+23/02/16 07:59:38 INFO mapred.JobClient:     Input split bytes=398
+23/02/16 07:59:38 INFO mapred.JobClient:     Spilled Records=0
+23/02/16 07:59:38 INFO mapred.JobClient:     CPU time spent (ms)=3740
+23/02/16 07:59:38 INFO mapred.JobClient:     Physical memory (bytes) snapshot=344018944
+23/02/16 07:59:38 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1606348800
+23/02/16 07:59:38 INFO mapred.JobClient:     Total committed heap usage (bytes)=257425408
+23/02/16 07:59:38 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 22.3437 seconds (0 bytes/sec)
+23/02/16 07:59:38 INFO mapreduce.ImportJobBase: Retrieved 21 records.
+23/02/16 07:59:38 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 07:59:38 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `user` AS t LIMIT 1
+23/02/16 07:59:38 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/user.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 07:59:38 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/de89e4b81487f175f6689782eac42ee9/user.jar
+23/02/16 07:59:38 INFO mapreduce.ImportJobBase: Beginning import of user
+23/02/16 07:59:38 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 07:59:40 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`id`), MAX(`id`) FROM `user`
+23/02/16 07:59:40 INFO mapred.JobClient: Running job: job_202302160647_0007
+23/02/16 07:59:41 INFO mapred.JobClient:  map 0% reduce 0%
+23/02/16 07:59:52 INFO mapred.JobClient:  map 50% reduce 0%
+23/02/16 07:59:59 INFO mapred.JobClient:  map 100% reduce 0%
+23/02/16 08:00:01 INFO mapred.JobClient: Job complete: job_202302160647_0007
+23/02/16 08:00:01 INFO mapred.JobClient: Counters: 23
+23/02/16 08:00:01 INFO mapred.JobClient:   File System Counters
+23/02/16 08:00:01 INFO mapred.JobClient:     FILE: Number of bytes read=0
+23/02/16 08:00:01 INFO mapred.JobClient:     FILE: Number of bytes written=794396
+23/02/16 08:00:01 INFO mapred.JobClient:     FILE: Number of read operations=0
+23/02/16 08:00:01 INFO mapred.JobClient:     FILE: Number of large read operations=0
+23/02/16 08:00:01 INFO mapred.JobClient:     FILE: Number of write operations=0
+23/02/16 08:00:01 INFO mapred.JobClient:     HDFS: Number of bytes read=414
+23/02/16 08:00:01 INFO mapred.JobClient:     HDFS: Number of bytes written=110208
+23/02/16 08:00:01 INFO mapred.JobClient:     HDFS: Number of read operations=4
+23/02/16 08:00:01 INFO mapred.JobClient:     HDFS: Number of large read operations=0
+23/02/16 08:00:01 INFO mapred.JobClient:     HDFS: Number of write operations=4
+23/02/16 08:00:01 INFO mapred.JobClient:   Job Counters 
+23/02/16 08:00:01 INFO mapred.JobClient:     Launched map tasks=4
+23/02/16 08:00:01 INFO mapred.JobClient:     Total time spent by all maps in occupied slots (ms)=33186
+23/02/16 08:00:01 INFO mapred.JobClient:     Total time spent by all reduces in occupied slots (ms)=0
+23/02/16 08:00:01 INFO mapred.JobClient:     Total time spent by all maps waiting after reserving slots (ms)=0
+23/02/16 08:00:01 INFO mapred.JobClient:     Total time spent by all reduces waiting after reserving slots (ms)=0
+23/02/16 08:00:01 INFO mapred.JobClient:   Map-Reduce Framework
+23/02/16 08:00:01 INFO mapred.JobClient:     Map input records=6040
+23/02/16 08:00:01 INFO mapred.JobClient:     Map output records=6040
+23/02/16 08:00:01 INFO mapred.JobClient:     Input split bytes=414
+23/02/16 08:00:01 INFO mapred.JobClient:     Spilled Records=0
+23/02/16 08:00:01 INFO mapred.JobClient:     CPU time spent (ms)=4600
+23/02/16 08:00:01 INFO mapred.JobClient:     Physical memory (bytes) snapshot=348803072
+23/02/16 08:00:01 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=1611575296
+23/02/16 08:00:01 INFO mapred.JobClient:     Total committed heap usage (bytes)=257425408
+23/02/16 08:00:01 INFO mapreduce.ImportJobBase: Transferred 0 bytes in 22.9368 seconds (0 bytes/sec)
+23/02/16 08:00:01 INFO mapreduce.ImportJobBase: Retrieved 6040 records.
+[training@localhost ~]$ hadoop fs -ls
+Found 27 items
+drwxr-xr-x   - training supergroup          0 2023-02-09 08:39 DW
+drwxr-xr-x   - training supergroup          0 2023-02-13 03:03 Demo_OE
+drwxr-xr-x   - training supergroup          0 2023-02-14 07:24 HiveWork
+drwxr-xr-x   - training supergroup          0 2023-02-14 08:34 HiveWork1
+drwxr-xr-x   - training supergroup          0 2023-02-13 03:15 MO
+drwxr-xr-x   - training supergroup          0 2023-02-13 01:56 OE
+drwxr-xr-x   - training supergroup          0 2023-02-10 16:32 OEDemo
+drwxr-xr-x   - training supergroup          0 2023-02-10 14:17 OddEven
+drwxr-xr-x   - training supergroup          0 2023-02-10 07:01 OddEvenDemo
+drwxr-xr-x   - training supergroup          0 2023-02-07 08:30 PartitionDemo
+drwxr-xr-x   - training supergroup          0 2023-02-07 17:02 PartitionerDemo
+drwxr-xr-x   - training supergroup          0 2023-02-13 06:44 W
+drwxr-xr-x   - training supergroup          0 2023-02-13 04:31 WCV2
+drwxr-xr-x   - training supergroup          0 2023-02-13 07:43 WPOC
+drwxr-xr-x   - training supergroup          0 2023-02-13 02:37 Weather
+drwxr-xr-x   - training supergroup          0 2023-02-13 07:25 WeatherReport
+drwxr-xr-x   - training supergroup          0 2023-02-07 05:02 Word_Count
+drwxr-xr-x   - training supergroup          0 2023-01-23 06:27 dest
+drwxr-xr-x   - training supergroup          0 2023-01-23 06:50 destination
+drwxr-xr-x   - training supergroup          0 2023-02-16 07:57 genre
+drwxr-xr-x   - training supergroup          0 2023-02-16 07:58 movie
+drwxr-xr-x   - training supergroup          0 2023-02-16 07:58 moviegenre
+drwxr-xr-x   - training supergroup          0 2023-02-16 07:59 movierating
+drwxr-xr-x   - training supergroup          0 2023-02-16 07:59 occupation
+drwxr-xr-x   - training supergroup          0 2023-01-23 06:04 source
+drwxr-xr-x   - training supergroup          0 2023-01-23 07:40 src
+drwxr-xr-x   - training supergroup          0 2023-02-16 08:00 user
+[training@localhost ~]$ cd HiveWorkSpace
+[training@localhost HiveWorkSpace]$ ls -l HiveWorkSpace
+ls: cannot access HiveWorkSpace: No such file or directory
+[training@localhost HiveWorkSpace]$ hadoop fs -ls HiveWorkSpace
+ls: `HiveWorkSpace': No such file or directory
+[training@localhost HiveWorkSpace]$ find Sampl_m1.txt
+find: `Sampl_m1.txt': No such file or directory
+[training@localhost HiveWorkSpace]$ find Sample_m1.txt
+find: `Sample_m1.txt': No such file or directory
+[training@localhost HiveWorkSpace]$ ls -l
+total 4948
+-rw-rw-r-- 1 training training   25038 Feb 15 05:58 action.txt
+-rw-rw-r-- 1 training training   51553 Feb 15 06:18 comedy.txt
+drwxrwx--- 2 training training    4096 Mar  8  2001 ml-data
+-rwxrwxr-x 1 training training 4948405 Feb 14 06:26 ml-data.tgz
+-rw-rw-r-- 1 training training      80 Feb 16 08:34 Sample_m1
+-rw-rw-r-- 1 training training       0 Feb 16 08:32 Sample_m1~
+-rw-rw-r-- 1 training training   23876 Feb 15 06:18 thriller.txt
+[training@localhost HiveWorkSpace]$ hadoop fs -rm -r Sample_m1~
+rm: `Sample_m1~': No such file or directory
+[training@localhost HiveWorkSpace]$ rm Sample_m1~
+rm: remove regular empty file `Sample_m1~'? yes
+[training@localhost HiveWorkSpace]$ ls -l
+total 4948
+-rw-rw-r-- 1 training training   25038 Feb 15 05:58 action.txt
+-rw-rw-r-- 1 training training   51553 Feb 15 06:18 comedy.txt
+drwxrwx--- 2 training training    4096 Mar  8  2001 ml-data
+-rwxrwxr-x 1 training training 4948405 Feb 14 06:26 ml-data.tgz
+-rw-rw-r-- 1 training training      80 Feb 16 08:34 Sample_m1
+-rw-rw-r-- 1 training training   23876 Feb 15 06:18 thriller.txt
+[training@localhost HiveWorkSpace]$ cd ..
+[training@localhost ~]$ hadoop fs -put Sample_m1.txt HiveWorkSpace/ml-data
+put: `HiveWorkSpace/ml-data': No such file or directory
+[training@localhost ~]$ cd HiveWorkSpace
+[training@localhost HiveWorkSpace]$ hadoop fs -put Sample_m1.txt HiveWork
+put: `Sample_m1.txt': No such file or directory
+[training@localhost HiveWorkSpace]$ hadoop fs -put Sample_m1.txt HiveWorks
+put: `Sample_m1.txt': No such file or directory
+[training@localhost HiveWorkSpace]$ hadoop fs -put Sample_m1.txt HiveWorkSpace
+put: `Sample_m1.txt': No such file or directory
+[training@localhost HiveWorkSpace]$ hadoop fs -put Sample_m1.txt HiveWork1
+put: `Sample_m1.txt': No such file or directory
+[training@localhost HiveWorkSpace]$ hadoop fs -mkdir HW
+[training@localhost HiveWorkSpace]$ hadoop fs -put Sample_m1.txt HW
+put: `Sample_m1.txt': No such file or directory
+[training@localhost HiveWorkSpace]$ hadoop fs -put Sample_m1 HiveWork1
+[training@localhost HiveWorkSpace]$ sqoop export --connect jdbc:mysql://localhost/movielens --username training --password training --export-dirHiveWork1/sample_m1 --table m1
+23/02/16 08:48:11 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/02/16 08:48:11 ERROR tool.BaseSqoopTool: Error parsing arguments for export:
+23/02/16 08:48:11 ERROR tool.BaseSqoopTool: Unrecognized argument: --export-dirHiveWork1/sample_m1
+23/02/16 08:48:11 ERROR tool.BaseSqoopTool: Unrecognized argument: --table
+23/02/16 08:48:11 ERROR tool.BaseSqoopTool: Unrecognized argument: m1
+
+Try --help for usage instructions.
+usage: sqoop export [GENERIC-ARGS] [TOOL-ARGS]
+
+Common arguments:
+   --connect <jdbc-uri>                         Specify JDBC connect
+                                                string
+   --connection-manager <class-name>            Specify connection manager
+                                                class name
+   --connection-param-file <properties-file>    Specify connection
+                                                parameters file
+   --driver <class-name>                        Manually specify JDBC
+                                                driver class to use
+   --hadoop-home <dir>                          Override $HADOOP_HOME
+   --help                                       Print usage instructions
+-P                                              Read password from console
+   --password <password>                        Set authentication
+                                                password
+   --username <username>                        Set authentication
+                                                username
+   --verbose                                    Print more information
+                                                while working
+
+Export control arguments:
+   --batch                         Indicates underlying statements to be
+                                   executed in batch mode
+   --clear-staging-table           Indicates that any data in staging
+                                   table can be deleted
+   --columns <col,col,col...>      Columns to export to table
+   --direct                        Use direct export fast path
+   --export-dir <dir>              HDFS source path for the export
+-m,--num-mappers <n>               Use 'n' map tasks to export in parallel
+   --staging-table <table-name>    Intermediate staging table
+   --table <table-name>            Table to populate
+   --update-key <key>              Update records by specified key column
+   --update-mode <mode>            Specifies how updates are performed
+                                   when new rows are found with
+                                   non-matching keys in database
+
+Input parsing arguments:
+   --input-enclosed-by <char>               Sets a required field encloser
+   --input-escaped-by <char>                Sets the input escape
+                                            character
+   --input-fields-terminated-by <char>      Sets the input field separator
+   --input-lines-terminated-by <char>       Sets the input end-of-line
+                                            char
+   --input-optionally-enclosed-by <char>    Sets a field enclosing
+                                            character
+
+Output line formatting arguments:
+   --enclosed-by <char>               Sets a required field enclosing
+                                      character
+   --escaped-by <char>                Sets the escape character
+   --fields-terminated-by <char>      Sets the field separator character
+   --lines-terminated-by <char>       Sets the end-of-line character
+   --mysql-delimiters                 Uses MySQL's default delimiter set:
+                                      fields: ,  lines: \n  escaped-by: \
+                                      optionally-enclosed-by: '
+   --optionally-enclosed-by <char>    Sets a field enclosing character
+
+Code generation arguments:
+   --bindir <dir>                        Output directory for compiled
+                                         objects
+   --class-name <name>                   Sets the generated class name.
+                                         This overrides --package-name.
+                                         When combined with --jar-file,
+                                         sets the input class.
+   --input-null-non-string <null-str>    Input null non-string
+                                         representation
+   --input-null-string <null-str>        Input null string representation
+   --jar-file <file>                     Disable code generation; use
+                                         specified jar
+   --map-column-java <arg>               Override mapping for specific
+                                         columns to java types
+   --null-non-string <null-str>          Null non-string representation
+   --null-string <null-str>              Null string representation
+   --outdir <dir>                        Output directory for generated
+                                         code
+   --package-name <name>                 Put auto-generated classes in
+                                         this package
+
+Generic Hadoop command-line arguments:
+(must preceed any tool-specific arguments)
+Generic options supported are
+-conf <configuration file>     specify an application configuration file
+-D <property=value>            use value for given property
+-fs <local|namenode:port>      specify a namenode
+-jt <local|jobtracker:port>    specify a job tracker
+-files <comma separated list of files>    specify comma separated files to be copied to the map reduce cluster
+-libjars <comma separated list of jars>    specify comma separated jar files to include in the classpath.
+-archives <comma separated list of archives>    specify comma separated archives to be unarchived on the compute machines.
+
+The general command line syntax is
+bin/hadoop command [genericOptions] [commandOptions]
+
+
+At minimum, you must specify --connect, --export-dir, and --table
+[training@localhost HiveWorkSpace]$ sqoop export --connect jdbc:mysql://localhost/movielens --username training --password training --export-dir HiveWork1/sample_m1 --table m1
+23/02/16 08:48:51 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/02/16 08:48:51 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+23/02/16 08:48:51 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 08:48:51 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `m1` AS t LIMIT 1
+23/02/16 08:48:51 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `m1` AS t LIMIT 1
+23/02/16 08:48:51 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/8922b4decf659709cd32665c8eccf04f/m1.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 08:48:53 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/8922b4decf659709cd32665c8eccf04f/m1.jar
+23/02/16 08:48:53 INFO mapreduce.ExportJobBase: Beginning export of m1
+23/02/16 08:48:54 WARN mapreduce.ExportJobBase: Input path hdfs://0.0.0.0:8020/user/training/HiveWork1/sample_m1 does not exist
+23/02/16 08:48:55 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 08:48:55 INFO mapred.JobClient: Cleaning up the staging area hdfs://0.0.0.0:8020/var/lib/hadoop-hdfs/cache/mapred/mapred/staging/training/.staging/job_202302160647_0008
+23/02/16 08:48:55 ERROR security.UserGroupInformation: PriviledgedActionException as:training (auth:SIMPLE) cause:org.apache.hadoop.mapreduce.lib.input.InvalidInputException: Input path does not exist: hdfs://0.0.0.0:8020/user/training/HiveWork1/sample_m1
+23/02/16 08:48:55 ERROR tool.ExportTool: Encountered IOException running export job: org.apache.hadoop.mapreduce.lib.input.InvalidInputException: Input path does not exist: hdfs://0.0.0.0:8020/user/training/HiveWork1/sample_m1
+[training@localhost HiveWorkSpace]$ sqoop export --connect jdbc:mysql://localhost/movielens --username training --password training --export-dir HiveWorkSpace/sample_m1 --table m1
+23/02/16 08:49:28 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+23/02/16 08:49:28 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+23/02/16 08:49:28 INFO tool.CodeGenTool: Beginning code generation
+23/02/16 08:49:29 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `m1` AS t LIMIT 1
+23/02/16 08:49:29 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `m1` AS t LIMIT 1
+23/02/16 08:49:29 INFO orm.CompilationManager: HADOOP_HOME is /usr/lib/hadoop
+Note: /tmp/sqoop-training/compile/2510feee856aebf1519937dee6da4427/m1.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+23/02/16 08:49:31 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-training/compile/2510feee856aebf1519937dee6da4427/m1.jar
+23/02/16 08:49:31 INFO mapreduce.ExportJobBase: Beginning export of m1
+23/02/16 08:49:32 WARN mapreduce.ExportJobBase: Input path hdfs://0.0.0.0:8020/user/training/HiveWorkSpace/sample_m1 does not exist
+23/02/16 08:49:32 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+23/02/16 08:49:33 INFO mapred.JobClient: Cleaning up the staging area hdfs://0.0.0.0:8020/var/lib/hadoop-hdfs/cache/mapred/mapred/staging/training/.staging/job_202302160647_0009
+23/02/16 08:49:33 ERROR security.UserGroupInformation: PriviledgedActionException as:training (auth:SIMPLE) cause:org.apache.hadoop.mapreduce.lib.input.InvalidInputException: Input path does not exist: hdfs://0.0.0.0:8020/user/training/HiveWorkSpace/sample_m1
+23/02/16 08:49:33 ERROR tool.ExportTool: Encountered IOException running export job: org.apache.hadoop.mapreduce.lib.input.InvalidInputException: Input path does not exist: hdfs://0.0.0.0:8020/user/training/HiveWorkSpace/sample_m1
+[training@localhost HiveWorkSpace]$ 
